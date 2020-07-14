@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi Di</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="script.js"></script>
+<style id="jsbin-css">
+
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+body{
+	margin: 0px 0px;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.name{
+	font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  font-weight: bold;
+  color: #a5a5ff;
+}
+
+/* visited link */
+a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00F0;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #4242e6;
+  text-decoration: none;
+}
+
+.name{
+	position: absolute;
+	padding: 50px 470px;
+}
+
+.name h1 {
+  display: block;
+  font-size: 3em;
+  font-weight: bold;
+	text-align:center;
+}
+
+.glitch {
+  position: relative;
+  margin: 0 auto;
+  background: #1f2651;
+}
+
+.glitch::before,
+.glitch::after {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  clip: rect(0, 900px, 0, 0);
+  content: attr(data-text);
+}
+
+.glitch::after {
+  -webkit-animation-name: glitch-animation;
+          animation-name: glitch-animation;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  left: 4px;
+  text-shadow: -1px 0 #ffa800;
+  background: #1f2651;
+}
+
+.glitch::before {
+  -webkit-animation-name: glitch-animation-2;
+          animation-name: glitch-animation-2;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  left: -4px;
+  text-shadow: 1px 0 #00d8ff;
+  background: #1f2651;
+}
+
+
+
+
+
+section{
+	font-family: 'Press Start 2P', cursive;
+	background-color: #1f2651;
+	height: 560px;
+	width: 100%;
+	padding-top: 100px;
+	position: relative;
+	overflow: hidden;
+}
+
+section .wave{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(wave.png);
+  background-size: 1000px 100px;
+}
+
+section .wave.wave1{
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+section .wave.wave2{
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+section .wave.wave3{
+  animation: animate2 15s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+
+section .wave.wave4{
+  animation: animate2 30s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+.box-area{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box-area li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255,255,255,0.2);
+  animation: animate3 20s linear infinite;
+  bottom: -150px;
+}
+
+.box-area li:nth-child(1){
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(2){
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+
+.box-area li:nth-child(3){
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4){
+  left: 42%;
+  width: 130px;
+  height: 130px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.box-area li:nth-child(5){
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(6){
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+
+.style{
+	width: 100%;
+	color: #a5a5ff;
+	text-align: center;
+}
+
+.name{
+	display: flex;
+	align-items: center;
+}
+
+.name:hover{
+	font-size: 0;
+}
+
+.name:hover:after{
+	content: attr(data-hover);
+	font-size: 24px;
+	text-align:center;
+}
+
+
+#clock {
+	margin-top: 110px;
+	font-size: 65px;
+}
+
+#message{
+	font-size: 80px;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+#date{
+	font-size: 30px;
+	padding-top: 40px;
+}
+
+#msg:after{
+	content: '';
+	width: 6%;
+	height: 5px;
+	background-color: #eae6de;
+	bottom: 0;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+
+@keyframes animate {
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animate2 {
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: -1000px;
+  }
+}
+
+@keyframes animate3 {
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+
+}
+
+/* Expanded Animations */
+@-webkit-keyframes glitch-animation {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+@keyframes glitch-animation {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+
+@-webkit-keyframes glitch-animation-2 {
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+  }
+  5% {
+    clip: rect(52px, 9999px, 74px, 0);
+  }
+  10% {
+    clip: rect(79px, 9999px, 85px, 0);
+  }
+  15.0% {
+    clip: rect(75px, 9999px, 5px, 0);
+  }
+  20% {
+    clip: rect(67px, 9999px, 61px, 0);
+  }
+  25% {
+    clip: rect(14px, 9999px, 79px, 0);
+  }
+  30.0% {
+    clip: rect(1px, 9999px, 66px, 0);
+  }
+  35% {
+    clip: rect(86px, 9999px, 30px, 0);
+  }
+  40% {
+    clip: rect(23px, 9999px, 98px, 0);
+  }
+  45% {
+    clip: rect(85px, 9999px, 72px, 0);
+  }
+  50% {
+    clip: rect(71px, 9999px, 75px, 0);
+  }
+  55.0% {
+    clip: rect(2px, 9999px, 48px, 0);
+  }
+  60.0% {
+    clip: rect(30px, 9999px, 16px, 0);
+  }
+  65% {
+    clip: rect(59px, 9999px, 50px, 0);
+  }
+  70% {
+    clip: rect(41px, 9999px, 62px, 0);
+  }
+  75% {
+    clip: rect(2px, 9999px, 82px, 0);
+  }
+  80% {
+    clip: rect(47px, 9999px, 73px, 0);
+  }
+  85.0% {
+    clip: rect(3px, 9999px, 27px, 0);
+  }
+  90% {
+    clip: rect(26px, 9999px, 55px, 0);
+  }
+  95% {
+    clip: rect(42px, 9999px, 97px, 0);
+  }
+  100% {
+    clip: rect(38px, 9999px, 49px, 0);
+  }
+}
+
+
+</style>
+</head>
+<body onload="DateTime()">
+
+
+
+	<section>
+
+
+		<div class = "name">
+	  <h1>
+	    <span class="glitch" data-text="HappyBirthday">
+	      Hi Ardiaaaaan
+	    </span>
+	  </h1>
+	</div>
+
+
+		<div id="message" class="style"></div>
+		<div id="clock" class="style"></div>
+		<div id="date" class="style"></div>
+
+		<div class = "wave wave1"></div>
+    <div class = "wave wave2"></div>
+    <div class = "wave wave3"></div>
+    <div class = "wave wave4"></div>
+	</section>
+
+	<div class="animation-area">
+    <ul class="box-area">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+
+
+<script id="jsbin-javascript">
+function DateTime(){
+
+	getTime();
+	getDate();
+}
+
+function greetings(){                    //Function for showing greetings Gm,Ge,Gn
+	var today=new Date();
+	var hr=today.getHours();
+	if (hr>4 && hr<10) {
+		message="Pagi ";
+	}
+	else if (hr>10 && hr<16 ) {
+			message="Siang ";
+	}
+	else if (hr>16 && hr<18 ) {
+			message="Sore";
+	}
+	else if (hr>18 && hr<24 ) {
+			message="Malam ";
+	}
+	else{
+		message="Tiduuuur";
+	}
+	document.getElementById("message").innerHTML=message;
+	updateGreetings("message",3600000);
+}
+
+function getTime(){                     //function to Get time
+	var today=new Date();
+	var hr=today.getHours();
+	var min=today.getMinutes();
+	var sec=today.getSeconds();
+	var ap="AM";
+	if(hr==0){
+		hr=12;
+	}
+	else if (hr>12) {
+		hr=hr-12;
+		ap="PM";
+	}
+	hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+   	time=hr + ":" + min + ":" + sec + " " + ap;
+   	console.log(time);
+	document.getElementById("clock").innerHTML = time;
+	updateTime("clock",1000);
+}
+
+function checkTime(i) {                         //function to check time and add prefix "0" if single digit
+	if(i<10){
+		i="0"+i;
+	}
+	return i;
+}
+
+
+function getDate(){								//function to get current Date
+	var today=new Date();
+	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    updateDate("date",3600000)
+}
+
+
+//functions to update all functions within certain interval
+
+function updateGreetings(id,timeInterval){
+	setTimeout(greetings,timeInterval);
+}
+
+function updateTime(id,timeInterval){
+	setTimeout(getTime,timeInterval);
+}
+function updateDate(id,timeInterval){
+	setTimeout(getDate,timeInterval);
+}
+</script>
+
+</body>
+</html>
