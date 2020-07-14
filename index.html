@@ -10,7 +10,7 @@
 <style id="jsbin-css">
 
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
-
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 body{
 	margin: 0px 0px;
 }
@@ -96,10 +96,6 @@ a:active {
   text-shadow: 1px 0 #00d8ff;
   background: #1f2651;
 }
-
-
-
-
 
 section{
 	font-family: 'Press Start 2P', cursive;
@@ -238,17 +234,35 @@ section .wave.wave4{
 	text-align:center;
 }
 
+.wish{
+	max-width: 1170px;
+	width: 100%;
+	padding: 0 15px;
+	padding-top: 100px;
+	color: #131314;
+	padding-bottom: 50px;
+	margin: 0 auto;
+}
+
+.wish h1,h2{
+	text-align: center;
+	font-family: "nunito";
+	font
+}
+
+.foto{
+	padding-left: 120px;
+}
+
+.clear {
+  clear: left;
+}
 
 #clock {
-	margin-top: 110px;
+	margin-top: 120px;
 	font-size: 65px;
 }
 
-#message{
-	font-size: 80px;
-	position: relative;
-	padding-bottom: 20px;
-}
 
 #date{
 	font-size: 30px;
@@ -367,71 +381,7 @@ section .wave.wave4{
     clip: rect(4px, 9999px, 91px, 0);
   }
 }
-@keyframes glitch-animation {
-  0% {
-    clip: rect(42px, 9999px, 44px, 0);
-  }
-  5% {
-    clip: rect(12px, 9999px, 59px, 0);
-  }
-  10% {
-    clip: rect(48px, 9999px, 29px, 0);
-  }
-  15.0% {
-    clip: rect(42px, 9999px, 73px, 0);
-  }
-  20% {
-    clip: rect(63px, 9999px, 27px, 0);
-  }
-  25% {
-    clip: rect(34px, 9999px, 55px, 0);
-  }
-  30.0% {
-    clip: rect(86px, 9999px, 73px, 0);
-  }
-  35% {
-    clip: rect(20px, 9999px, 20px, 0);
-  }
-  40% {
-    clip: rect(26px, 9999px, 60px, 0);
-  }
-  45% {
-    clip: rect(25px, 9999px, 66px, 0);
-  }
-  50% {
-    clip: rect(57px, 9999px, 98px, 0);
-  }
-  55.0% {
-    clip: rect(5px, 9999px, 46px, 0);
-  }
-  60.0% {
-    clip: rect(82px, 9999px, 31px, 0);
-  }
-  65% {
-    clip: rect(54px, 9999px, 27px, 0);
-  }
-  70% {
-    clip: rect(28px, 9999px, 99px, 0);
-  }
-  75% {
-    clip: rect(45px, 9999px, 69px, 0);
-  }
-  80% {
-    clip: rect(23px, 9999px, 85px, 0);
-  }
-  85.0% {
-    clip: rect(54px, 9999px, 84px, 0);
-  }
-  90% {
-    clip: rect(45px, 9999px, 47px, 0);
-  }
-  95% {
-    clip: rect(37px, 9999px, 20px, 0);
-  }
-  100% {
-    clip: rect(4px, 9999px, 91px, 0);
-  }
-}
+
 
 @-webkit-keyframes glitch-animation-2 {
   0% {
@@ -503,19 +453,18 @@ section .wave.wave4{
 </style>
 </head>
 <body onload="DateTime()">
+	<iframe src="nadin.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
 
 
 
 	<section>
-
-
-		<div class = "name">
+	<div class = "name">
 	  <h1>
 	    <span class="glitch" data-text="HappyBirthday">
 	      Hi Ardiaaaaan
 	    </span>
 	  </h1>
-	</div>
+		</div>
 
 
 		<div id="message" class="style"></div>
@@ -536,6 +485,24 @@ section .wave.wave4{
       <li></li>
       <li></li>
       <li></li>
+
+	</div>
+
+	<div class="clear"></div>
+
+	<div class="wish">
+		<h1>Hi Ardi,</h1>
+		<br>
+		<br>
+		<br>
+		<h2>Selamat berhari lahir. Selamat bertambah usia. Aku nggak bisa ngasih kue dan ngasih lilin supaya bisa kamu tiup. Aku cuma bisa buat ginian aja hehehe, ini pun yang buat bukan aku. Aku ngasih idenya doang.
+Semoga kamu selalu berbahagia, sehat dan Panjang umur.
+Hope u like it!</h2>
+	</div>
+
+	<div class="foto">
+		<img src="bg2.jpeg">
+	</div>
 
 
 <script id="jsbin-javascript">
